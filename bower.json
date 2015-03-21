@@ -1,0 +1,27 @@
+{
+  "name": "device-manager",
+  "version": "1.0.0",
+  "homepage": "https://github.com/mkay581/device-manager",
+  "authors": [
+    "Mark Kennedy <mkay581@gmail.com>"
+  ],
+  "description": "Device Manager",
+  "main": "src/device-manager.js",
+  "moduleType": [
+    "amd",
+    "es6",
+    "node"
+  ],
+  "keywords": [
+    "device manager",
+    "device detection"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

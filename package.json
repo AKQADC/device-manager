@@ -1,0 +1,32 @@
+{
+  "name": "device-manager",
+  "version": "1.0.0",
+  "description": "Device Manager",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mkay581/device-manager.git"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "author": {
+    "name": "Mark Kennedy",
+    "url": "http://heyimmark.com"
+  },
+  "keywords": [
+    "device manager",
+    "device detection"
+  ],
+  "main": "src/event-handler.js",
+  "devDependencies": {
+    "grunt-build-tools": "^1.1.1",
+    "load-grunt-tasks": "^3.1.0",
+    "sinon": "^1.14.1"
+  },
+  "scripts": {
+    "test": "grunt bt:test"
+  },
+  "dependencies": {
+    "event-handler": "^1.0.0"
+  }
+}
