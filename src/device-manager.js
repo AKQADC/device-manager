@@ -1,6 +1,6 @@
 'use strict';
 
-var EventHandler = require('event-handler');
+var EventHandler = require('./../external/event-handler/src/event-handler');
 /**
  @class DeviceManager
  @description A set of utilities for managing the state of the user's current device.
