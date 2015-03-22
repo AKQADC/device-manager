@@ -1,5 +1,5 @@
 /** 
-* device-manager - v1.0.3.
+* device-manager - v1.0.5.
 * https://github.com/mkay581/device-manager.git
 * Copyright 2015 Mark Kennedy. Licensed MIT.
 */
@@ -218,7 +218,7 @@ module.exports = EventHandler;
 },{}],2:[function(require,module,exports){
 'use strict';
 
-var EventHandler = require('event-handler');
+var EventHandler = require('./../external/event-handler/src/event-handler');
 /**
  @class DeviceManager
  @description A set of utilities for managing the state of the user's current device.
@@ -317,4 +317,4 @@ DeviceManager.prototype = {
 };
 
 module.exports = new DeviceManager();
-},{"event-handler":1}]},{},[2]);
+},{"./../external/event-handler/src/event-handler":1}]},{},[2]);
