@@ -7,33 +7,21 @@ module.exports = function(grunt) {
             dist: 'dist',
             build: {
                 files: {
-                    'dist/device-manager.js': ['src/device-manager.js']
+                    'dist/scroll.js': ['src/scroll.js']
                 },
                 browserifyOptions: {
-                    standalone: 'DeviceManager'
+                    standalone: 'Scroll'
                 }
             },
             min: {
                 files: {
-                    'dist/device-manager-min.js': ['dist/device-manager.js']
+                    'dist/scroll-min.js': ['dist/scroll.js']
                 }
             },
             tests: {
                 mocha: {
                     src: ['tests/*.js']
                 }
-            }
-        },
-        copy: {
-            main: {
-                files: [
-                    {
-                        expand: true,
-                        cwd: 'node_modules/event-handler',
-                        src: ['**'],
-                        dest: 'external/event-handler/'
-                    }
-                ]
             }
         }
     });

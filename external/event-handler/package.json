@@ -1,0 +1,42 @@
+{
+  "name": "event-handler",
+  "version": "1.0.0",
+  "description": "Event handler",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mkay581/event-handler.git"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "author": {
+    "name": "Mark Kennedy",
+    "url": "http://heyimmark.com"
+  },
+  "keywords": [
+    "event handler",
+    "event manager",
+    "addEventListener",
+    "removeEventListener",
+    "dispatchEvent"
+  ],
+  "main": "src/event-handler.js",
+  "devDependencies": {
+    "grunt-build-tools": "^1.1.1",
+    "load-grunt-tasks": "^3.1.0",
+    "sinon": "^1.14.1"
+  },
+  "scripts": {
+    "test": "grunt bt:test"
+  },
+  "readme": "# Event Handler\n\n## Usage\n\nWith this library you can listen in on native scroll events the same way you would if a user was scrolling the\npage with a mouse or touch event.\n\n```javascript\nvar obj = {};\nEventHandler.createTarget(obj);\n\n// listen to events\nobj.addEventListener('wee', function () {\n    // wee was trigger!\n});\n\nobj.dispatchEvent('wee');\n\nEventHandler.destroyTarget(obj);\n\n```",
+  "readmeFilename": "README.md",
+  "gitHead": "a91cde8180daade2552256cbd52480afa64f27b6",
+  "bugs": {
+    "url": "https://github.com/mkay581/event-handler/issues"
+  },
+  "homepage": "https://github.com/mkay581/event-handler",
+  "_id": "event-handler@1.0.0",
+  "_shasum": "85024804429483341fa37bba8c3f02d5986bbe3c",
+  "_from": "event-handler@*"
+}
