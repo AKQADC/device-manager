@@ -1,6 +1,6 @@
 {
   "name": "device-manager",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Detect information about a user's current device",
   "repository": {
     "type": "git",
