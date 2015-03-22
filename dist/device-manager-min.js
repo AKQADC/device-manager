@@ -1,5 +1,5 @@
 /** 
-* device-manager - v1.0.1.
+* device-manager - v1.0.3.
 * https://github.com/mkay581/device-manager.git
 * Copyright 2015 Mark Kennedy. Licensed MIT.
 */
