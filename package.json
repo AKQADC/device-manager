@@ -17,7 +17,7 @@
     "device manager",
     "device detection"
   ],
-  "main": "src/event-handler.js",
+  "main": "src/device-manager.js",
   "devDependencies": {
     "grunt": "^0.4.5",
     "grunt-build-tools": "^1.1.1",
