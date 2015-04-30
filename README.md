@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/mkay581/device-manager.svg?branch=master)](https://travis-ci.org/mkay581/device-manager)
+
 # Device Manager
 
 ## Usage
