@@ -58,12 +58,26 @@ DeviceManager.prototype = {
      * @returns {boolean}
      */
     isBrowser: function (name) {
-        var pattern = name;
+        var pattern = name,
+            userAgent = this.getUserAgent(),
+            reg;
+
+        if (!name) {
+            return true;
+        }
+
         if (Array.isArray(name)) {
             pattern = name.join('|');
         }
-        var reg = new RegExp(pattern, 'i');
-        return reg.test(this.getUserAgent());
+
+        if (pattern.indexOf('safari') > -1) {
+            // avoid safari returning true when in chrome
+            reg = new RegExp('chrome', 'i');
+            return !reg.test(userAgent);
+        } else {
+            reg = new RegExp(pattern, 'i');
+            return reg.test(userAgent);
+        }
     },
 
     /**
