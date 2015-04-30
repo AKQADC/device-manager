@@ -33,4 +33,32 @@ describe('Device Manager', function (){
         eventManagerDestroyTargetStub.restore();
         getUserAgentStub.restore();
     });
+
+    it('isBrowser("safari") should return false, even when useragent string contains the word "safari" like in Mac\'s Chrome', function (){
+        var chromeUserAgentMock = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_4) " +
+            "AppleWebKit/537.36 (KHTML, like Gecko) " +
+            "Chrome/42.0.2311.90 Safari/537.36";
+        var eventManagerCreateTargetStub = sinon.stub(EventHandler, 'createTarget');
+        var eventManagerDestroyTargetStub = sinon.stub(EventHandler, 'destroyTarget');
+        var device = require('./../src/device-manager');
+        var getUserAgentStub = sinon.stub(device, 'getUserAgent').returns(chromeUserAgentMock);
+        assert.equal(device.isBrowser('safari'), false);
+        device.destroy();
+        eventManagerCreateTargetStub.restore();
+        eventManagerDestroyTargetStub.restore();
+        getUserAgentStub.restore();
+    });
+
+    it('isBrowser() should return true if nothing is passed to it', function (){
+        var userAgentMock = '';
+        var eventManagerCreateTargetStub = sinon.stub(EventHandler, 'createTarget');
+        var eventManagerDestroyTargetStub = sinon.stub(EventHandler, 'destroyTarget');
+        var device = require('./../src/device-manager');
+        var getUserAgentStub = sinon.stub(device, 'getUserAgent').returns(userAgentMock);
+        assert.equal(device.isBrowser(), true);
+        device.destroy();
+        eventManagerCreateTargetStub.restore();
+        eventManagerDestroyTargetStub.restore();
+        getUserAgentStub.restore();
+    });
 });
