@@ -3,6 +3,8 @@ module.exports = function(grunt) {
 
     grunt.initConfig({
         pkg: grunt.file.readJSON("package.json"),
+
+
         bt: {
             dist: 'dist',
             build: {
@@ -17,6 +19,9 @@ module.exports = function(grunt) {
                 files: {
                     'dist/device-manager-min.js': ['dist/device-manager.js']
                 }
+            },
+            banner: {
+                files: ['dist/*']
             },
             tests: {
                 mocha: {
@@ -38,5 +43,6 @@ module.exports = function(grunt) {
         }
     });
 
+    grunt.loadNpmTasks('build-tools');
     require("load-grunt-tasks")(grunt);
 };
