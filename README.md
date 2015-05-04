@@ -28,3 +28,4 @@ DeviceManager.isMobile();
 => true
 
 ```
+
